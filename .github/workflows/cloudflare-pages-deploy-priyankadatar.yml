@@ -1,0 +1,21 @@
+
+name: Deploy Static Site - priyankadatar
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.ORG_CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.ORG_CLOUDFLARE_ACCOUNT_ID }}
+          projectName: cf-pages-site-01  # Project name from mapping
+          directory: .  # Directory is relative to static site repo root now
