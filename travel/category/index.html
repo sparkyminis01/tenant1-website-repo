@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Priyanka Datar is a Data scientist and fitness enthusiast who loves to travel and explore new places.">
+    <meta name="keywords" content="Data Science, Fitness, Travel">
+    <meta name="author" content="Priyanka Datar">
+    <meta name="theme-color" content="rgba(78, 33, 97, 1)">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+
+    <!-- Existing scripts -->
+    <script src="/js/engagemini-widget-v1743752227.js" defer></script>
+    <script src="/js/catchmini-widget-v1743751060.js" defer></script>
+
+    <!-- Service Worker Registration -->
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swUrl = '/js/service-worker-1744042406.js';
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => console.log('Service Worker registered:', registration))
+                    .catch(error => console.log('Service Worker registration failed:', error));
+            });
+        }
+    </script>
+    
+
+    <title>All posts for Category | Priyanka Datar</title>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    </noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;500;700&family=Sarina&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;500;700&family=Sarina&display=swap" rel="stylesheet">
+    </noscript>
+
+    <style>
+        :root {
+            --primary-color: rgba(78, 33, 97, 1);
+            --secondary-color: rgba(240, 248, 127, 1);
+            --highlight-color: rgba(218, 177, 218, 1);
+            --sidebar-bg: rgba(78, 33, 97, 0.17);
+        }
+
+        body {
+            font-family: "Comic Neue", sans-serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            loading: lazy;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-toggle::before {
+            width: 1.25em;
+            line-height: 0;
+            content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+            transition: transform 0.35s ease;
+            transform-origin: center;
+        }
+
+        .btn-toggle[aria-expanded="true"]::before {
+            transform: rotate(90deg);
+        }
+
+        .btn-toggle-nav a {
+            display: inline-flex;
+            padding: 0.1875rem 0.5rem;
+            margin-top: 0.125rem;
+            margin-left: 1.25rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-toggle-nav a:hover,
+        .btn-toggle-nav a:focus {
+            background-color: var(--highlight-color);
+        }
+
+        .dh-back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .dh-back-to-top-btn:hover {
+            opacity: 1;
+        }
+
+        .dh-logo-top {
+            color: var(--primary-color);
+            font-family: 'Sarina', cursive;
+            font-size: clamp(2.5rem, 4vw, 4rem);
+        }
+
+        .dh-navbar {
+            background: radial-gradient(circle, rgba(102,114,146,1) 0%, rgba(224,189,238,1) 100%);
+            transition: background-color 0.3s;
+        }
+
+        .dh-navbar.scrolled {
+            background: rgba(102,114,146,0.95);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .dh-navbar-brand {
+            color: var(--primary-color);
+            font-size: 1.7rem;
+            font-size: 2.5rem !important; /* Matches h1 size in content sections */
+            font-family: 'Dancing Script', cursive; /* Matches your logo style */
+
+        }
+
+        .dh-nav-item-link {
+            color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        .dh-nav-item-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        .dh-sidebar-toggle {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            margin: 1rem 0;
+            width: 100%;
+            display: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dh-sidebar-toggle .menu-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .dh-sidebar-toggle[aria-expanded="true"] .menu-icon {
+            transform: rotate(45deg);
+        }
+
+        .dh-sidebar-ads {
+            background-color: var(--sidebar-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .dh-sidebar-ads:hover {
+            transform: translateY(-2px);
+        }
+
+        .dh-footer-gradient {
+            background: linear-gradient(to bottom right, rgba(102,114,146,1) 0%, rgba(224,189,238,1) 100%);
+        }
+
+        .dh-footer-copyright {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .dh-hr {
+            height: 1px;
+            opacity: 0.5;
+        }
+
+        /* Enhanced sidebar styles */
+        #leftNavCollapse {
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile and desktop adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-toggler {
+                order: 2;
+                margin-left: auto;
+            }
+            .dh-navbar-brand {
+                order: 1;
+            }
+            .dh-sidebar-toggle {
+                display: block;
+            }
+            aside.col-12 {
+                flex: 0 0 200px; /* Reduced width on mobile when open */
+                max-width: 200px;
+            }
+            #leftNavCollapse {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 200px; /* Reduced width to match aside */
+                height: 100vh;
+                background-color: #fff;
+                padding-top: 60px;
+                z-index: 1050;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+                overflow-y: auto;
+            }
+            #leftNavCollapse.show {
+                display: block;
+            }
+            .navbar-collapse {
+                text-align: center;
+            }
+            .navbar-nav {
+                margin: 0 auto;
+                width: 100%;
+            }
+            .dh-nav-item-link {
+                display: block;
+                padding: 0.75rem 0;
+            }
+            section {
+                margin-left: 0;
+            }
+            section.col-md-9.col-lg-10 {
+                transition: margin-left 0.3s ease;
+            }
+            body.show-sidebar section.col-md-9.col-lg-10 {
+                margin-left: 200px; /* Reduced margin to match sidebar width */
+            }
+        }
+
+        @media (min-width: 992px) {
+            aside.col-md-3 {
+                flex: 0 0 200px; /* Reduced width on desktop */
+                max-width: 200px;
+            }
+            #leftNavCollapse {
+                display: block !important;
+                position: static;
+                width: 200px; /* Reduced width */
+                height: auto;
+                box-shadow: none;
+                padding-top: 0;
+            }
+            .dh-sidebar-toggle {
+                display: none;
+            }
+            section.col-md-9 {
+                flex: 0 0 calc(100% - 200px); /* Adjusted content width */
+                max-width: calc(100% - 200px);
+            }
+        }
+
+  .navbar-nav .nav-link {
+    font-size: 1.5rem !important; /* Matches or complements header sizes */
+    font-weight: 600; /* Bold for emphasis */
+    padding: 0.5rem 1rem; /* Increased padding for better spacing */
+    transition: color 0.2s; /* Smooth hover effect */
+  }
+  .navbar-nav .nav-link:hover {
+    color: rgba(78, 33, 97, 1); /* Use theme color for hover */
+  }
+
+    </style>
+
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q6RZD2T3B0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('set', 'event', {
+            tenant_name: 'priyankadatar'
+        });
+        gtag('config', 'G-Q6RZD2T3B0');
+    </script>
+
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swUrl = '/js/service-worker-1744042406.js';
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => console.log('Service Worker registered:', registration))
+                    .catch(error => console.error('Service Worker registration failed:', error));
+            });
+        }
+    </script>
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+</head>
+
+<body>
+    <a href="#top" class="btn dh-back-to-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+        </svg>
+    </a>
+
+    <header id="top">
+        
+        <div class="container text-center py-3">
+            <a class="dh-logo-top text-decoration-none" href="/">
+                Priyanka Datar
+            </a>
+        </div>
+        
+
+        <nav class="navbar navbar-expand-lg rounded-pill dh-navbar">
+            <div class="container d-flex align-items-center">
+                
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dh-navbar-01" aria-controls="dh-navbar-01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="dh-navbar-01">
+                    <ul class="navbar-nav">
+                        
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/recipes/">
+                                Recipes
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/travel/">
+                                Travel
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/analytics/">
+                                Analytics
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/shop/">
+                                Shop
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid py-4">
+        <div class="row">
+            
+            <aside class="col-12 col-md-3 col-lg-2">
+                <button class="btn dh-sidebar-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#leftNavCollapse" aria-controls="leftNavCollapse" aria-expanded="false" aria-label="Toggle Categories Sidebar">
+                    <span class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </span>
+                    Explore
+                </button>
+
+                <div class="collapse" id="leftNavCollapse">
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/recipes/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Recipes</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Recipes_coll-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Collections
+                                </button>
+                                <div class="collapse" id="Recipes_coll-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/recipes/collection/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#side%20dish" class="link-dark rounded">Side dish</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#meal" class="link-dark rounded">Meal</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#snack" class="link-dark rounded">Snack</a></li>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#breakfast" class="link-dark rounded">Breakfast</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Recipes-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Recipes-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/recipes/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#meal" class="link-dark rounded">Meal</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#rice" class="link-dark rounded">Rice</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#salad" class="link-dark rounded">Salad</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#chutney" class="link-dark rounded">Chutney</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#raita" class="link-dark rounded">Raita</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#sandwich" class="link-dark rounded">Sandwich</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#snack" class="link-dark rounded">Snack</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#soup" class="link-dark rounded">Soup</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#curry" class="link-dark rounded">Curry</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#pickle" class="link-dark rounded">Pickle</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#smoothie" class="link-dark rounded">Smoothie</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#sweet" class="link-dark rounded">Sweet</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#paratha" class="link-dark rounded">Paratha</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/travel/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Travel</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Travel_coll-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Collections
+                                </button>
+                                <div class="collapse" id="Travel_coll-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/travel/collection/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/travel/collection/#asia" class="link-dark rounded">Asia</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Travel-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Travel-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/travel/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/travel/category/#travel%20guide" class="link-dark rounded">Travel Guide</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/analytics/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Analytics</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Analytics_coll-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Collections
+                                </button>
+                                <div class="collapse" id="Analytics_coll-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/analytics/collection/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/analytics/collection/#domain" class="link-dark rounded">Domain</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Analytics-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Analytics-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/analytics/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/analytics/category/#people%20analytics" class="link-dark rounded">People Analytics</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/shop/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Shop</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Shop-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Shop-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/shop/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#cooking" class="link-dark rounded">Cooking</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#photography" class="link-dark rounded">Photography</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#travel" class="link-dark rounded">Travel</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#utensil" class="link-dark rounded">Utensil</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+
+                    <hr class="container-fluid hr dh-hr" />
+                    <hr class="container-fluid hr dh-hr" />
+
+                    <div class="flex-shrink-0 p-4 dh-sidebar-ads">
+
+                    </div>
+                </div>
+            </aside>
+            
+
+            <section class="col-12 col-md-9 col-lg-10">
+                
+
+
+<style>
+  /* Fallback CSS to adjust navbar size (if base.html can't be modified) */
+  .navbar-nav .nav-link {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-brand {
+    font-size: 2.5rem !important;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  /* Content section styling */
+  .content-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .content-section .card {
+    border: none;
+    transition: transform 0.2s;
+  }
+  .content-section .card:hover {
+    transform: scale(1.05);
+  }
+  .content-section img {
+    object-fit: cover; /* Match list.html's default, but can be adjusted */
+  }
+  .shop-item img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    --bs-border-width: 0.3rem;
+    --bs-border-radius: 3rem;
+    --bs-border-color: rgba(218, 177, 218, 1);
+  }
+  .shop-item .card-body {
+    text-align: center;
+  }
+  .shop-item .btn-external::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-up-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z'/%3E%3C/svg%3E");
+    margin-left: 0.5rem;
+  }
+  .affiliate-disclosure {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+</style>
+
+<div class="content-section">
+  
+  
+  
+  
+
+  
+    <div class="mt-4">
+      <h1 class="text-center">Categories for Travel</h1>
+    </div>
+  
+
+  
+    <div class="mt-4">
+      <h2 class="text-center" id="travel guide">Categories: Travel Guide</h2>
+      <div class="row justify-content-evenly">
+        
+        
+          
+          
+          <div class="col-md-3 text-center mt-3 mb-3">
+            <div class="card ">
+              <a href="/travel/goa-travel-guide-top-tips-and-must-visit-places/">
+                
+                  
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+    
+
+    
+
+    
+        
+            <picture>
+                
+                
+
+                
+                    <source srcset="/assets/optimized/goa_300x300.webp" type="image/webp">
+                
+                
+                    
+                        <img class="rounded-bottom border"
+                             src="/assets/optimized/goa_300x300.png"
+                             alt="Goa Travel Guide: Top Tips and Must-Visit Places by Priyanka Datar"
+                             loading="lazy"
+                             >
+                    
+                
+            </picture>
+        
+    
+
+                
+              </a>
+              <div class="card-body p-2">
+                <p class="mt-2">
+                  <a href="/travel/goa-travel-guide-top-tips-and-must-visit-places/"
+                     class="btn btn-outline-info btn-lg"
+                     >
+                    Goa Travel Guide: Top Tips and Must-Visit Places
+                  </a>
+                </p>
+                <p class="card-text">
+                  
+                    This is a comprehensive guide, where you’ll find all the things you need to know about Goa, insider advice, and detailed recommendations to ensure your Goa trip is nothing short of exceptional!
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        
+          
+          
+          <div class="col-md-3 text-center mt-3 mb-3">
+            <div class="card ">
+              <a href="/travel/top-tips-for-planning-an-unforgettable-malaysia-adventure-with-family/">
+                
+                  
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+        
+    
+
+    
+    
+
+    
+
+    
+        
+            <picture>
+                
+                
+
+                
+                    <source srcset="/assets/optimized/travel_malaysia1_image1_300x300.webp" type="image/webp">
+                
+                
+                    
+                        <img class="rounded-bottom border"
+                             src="/assets/optimized/travel_malaysia1_image1_300x300.jpg"
+                             alt="Top Tips for Planning an Unforgettable Malaysia Adventure with Family by Priyanka Datar"
+                             loading="lazy"
+                             >
+                             <!--style="--bs-border-width:0.3rem; --bs-border-radius:3rem; --bs-border-color:rgba(218, 177, 218, 1); --bs-border-width: 0.3rem; --bs-border-radius: 3rem; --bs-border-color: rgba(218, 177, 218, 1);"-->
+                    
+                
+            </picture>
+        
+    
+
+                
+              </a>
+              <div class="card-body p-2">
+                <p class="mt-2">
+                  <a href="/travel/top-tips-for-planning-an-unforgettable-malaysia-adventure-with-family/"
+                     class="btn btn-outline-info btn-lg"
+                     >
+                    Top Tips for Planning an Unforgettable Malaysia Adventure with Family
+                  </a>
+                </p>
+                <p class="card-text">
+                  
+                    Malaysia
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <hr class="my-4">
+  
+
+  <div class="mt-4">
+    <h2 class="text-center" id="all">All Categories</h2>
+    <div class="row justify-content-evenly">
+      
+      
+        
+        
+        <div class="col-md-4 text-center mt-3 mb-3">
+          <div class="card">
+            <a href="/travel/category/#travel%20guide">
+              
+                
+    
+    
+    
+    
+    
+
+    
+    
+    
+        
+    
+
+    
+
+    
+        
+
+        
+            <picture>
+                
+                    
+                    
+
+                    
+                        <source srcset="/assets/optimized/travel%20guide_300x300.webp" type="image/webp">
+                    
+                    
+                        
+                            <img class="rounded-bottom border"
+                                 src="/assets/optimized/travel%20guide_300x300.png"
+                                 alt="Category Travel Guide"
+                                 loading="lazy"
+                                 >
+                        
+                    
+                
+            </picture>
+        
+    
+
+              
+            </a>
+            <div class="card-body p-2">
+              <p class="mt-2">
+                <a href="/travel/category/#travel%20guide"
+                   class="btn btn-outline-info btn-lg"
+                   >
+                  Travel Guide
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-4 py-4 dh-footer-gradient">
+        <div class="container">
+          <div class="row">
+            <!-- Newsletter Subscription Form -->
+            <div class="col-md-6 mb-4 mb-md-0">
+              <h5 class="text-white mb-3">Subscribe to Our Newsletter</h5>
+              <form id="newsletter-form" class="needs-validation" novalidate>
+                <div class="input-group mb-2">
+                  <input type="email" class="form-control" id="newsletter-email" placeholder="Enter your email" required>
+                  <button type="submit" class="btn btn-warning">Subscribe</button>
+                </div>
+                <small class="text-muted">Powered by <a href="https://www.sparkyminis.com/catchmini" target="_blank" rel="noopener">CatchMini API</a></small>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </form>
+            </div>
+      
+            <!-- Copyright and Links -->
+            <div class="col-md-6 text-center text-md-end">
+              <p class="text-white mb-1">© Priyanka Datar  - All rights reserved.</p>
+              <p class="text-white mb-1">Built with ❤️ using <a href="https://www.sparkyminis.com" target="_blank" rel="noopener" class="text-decoration-underline">SparkyMinis</a></p>
+              <p class="text-white">
+                <a href="/" class="text-decoration-underline text-white">Privacy Policy</a>
+              </p>
+            </div>
+          </div>
+          <hr class="dh-hr bg-white opacity-50">
+        </div>
+      </footer>
+      
+      <style>
+        .dh-footer-gradient {
+          background: linear-gradient(90deg, rgba(218, 177, 218, 1), rgba(78, 33, 97, 1));
+          color: #ffffff;
+        }
+        .dh-footer-gradient .btn-primary {
+          background-color: rgba(240, 248, 127, 1);
+          border-color: rgba(240, 248, 127, 1);
+        }
+        .dh-footer-gradient .btn-primary:hover {
+          background-color: rgba(240, 248, 127, 0.8);
+          border-color: rgba(240, 248, 127, 0.8);
+        }
+        .dh-footer-gradient .form-control {
+          border-color: #ffffff;
+          color: #000000;
+        }
+        .dh-footer-gradient .form-control:focus {
+          border-color: rgba(78, 33, 97, 1);
+          box-shadow: 0 0 5px rgba(78, 33, 97, 1);
+        }
+        .dh-footer-gradient .text-decoration-underline:hover {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+        .dh-footer-gradient .needs-validation {
+          margin-bottom: 0;
+        }
+        .dh-footer-gradient .invalid-feedback {
+          display: none;
+          width: 100%;
+          margin-top: 0.25rem;
+          font-size: 0.875em;
+          color: #dc3545;
+        }
+        .dh-footer-gradient .needs-validation.invalid .invalid-feedback {
+          display: block;
+        }
+        .dh-footer-gradient .needs-validation.invalid .form-control {
+          border-color: #dc3545;
+        }
+      
+        /* JavaScript for form validation */
+        <script>
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var form = forms[0];
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  form.classList.add('invalid');
+                } else {
+                  event.preventDefault(); // Prevent default submission for demo
+                  alert('Thank you for subscribing! (This is a demo. Integrate with CatchMini API for real functionality.)');
+                  form.reset();
+                  form.classList.remove('invalid');
+                }
+                form.classList.add('was-validated');
+              }, false);
+            }, false);
+          })();
+        </script>
+      </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.dh-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top button visibility
+        const backToTopBtn = document.querySelector('.dh-back-to-top-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Sidebar and nested collapse management
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebarToggle = document.querySelector('.dh-sidebar-toggle');
+            const sidebar = document.getElementById('leftNavCollapse');
+            const body = document.body;
+
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', () => {
+                    const bsCollapse = new bootstrap.Collapse(sidebar, { toggle: false });
+                    const isOpen = sidebar.classList.contains('show');
+                    bsCollapse.toggle();
+                    body.classList.toggle('show-sidebar', !isOpen);
+                    console.log('Sidebar toggle clicked, state:', !isOpen);
+                });
+            }
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 991.98) {
+                    const isOutside = !sidebar.contains(e.target) && e.target !== sidebarToggle;
+                    if (isOutside && sidebar.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(sidebar, { toggle: false });
+                        bsCollapse.hide();
+                        body.classList.remove('show-sidebar');
+                        console.log('Sidebar closed by outside click');
+                    }
+                }
+            });
+        });
+
+        // Debugging: Log when Bootstrap is loaded
+        if (typeof bootstrap !== 'undefined') {
+            console.log('Bootstrap JS loaded successfully');
+        } else {
+            console.error('Bootstrap JS failed to load');
+        }
+    </script>
+</body>
+</html>
