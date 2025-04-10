@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Priyanka Datar is a Data scientist and fitness enthusiast who loves to travel and explore new places.">
+    <meta name="keywords" content="Data Science, Fitness, Travel">
+    <meta name="author" content="Priyanka Datar">
+    <meta name="theme-color" content="rgba(78, 33, 97, 1)">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+
+    <!-- Existing scripts -->
+    <script src="/js/engagemini-widget-v1743752227.js" defer></script>
+    <script src="/js/catchmini-widget-v1743751060.js" defer></script>
+
+    <!-- Service Worker Registration -->
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swUrl = '/js/service-worker-1744265811.js';
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => console.log('Service Worker registered:', registration))
+                    .catch(error => console.log('Service Worker registration failed:', error));
+            });
+        }
+    </script>
+    
+
+    <title>Besan Laddu | Priyanka Datar</title>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    </noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;500;700&family=Sarina&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;500;700&family=Sarina&display=swap" rel="stylesheet">
+    </noscript>
+
+    <style>
+        :root {
+            --primary-color: rgba(78, 33, 97, 1);
+            --secondary-color: rgba(240, 248, 127, 1);
+            --highlight-color: rgba(218, 177, 218, 1);
+            --sidebar-bg: rgba(78, 33, 97, 0.17);
+        }
+
+        body {
+            font-family: "Comic Neue", sans-serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            loading: lazy;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-toggle::before {
+            width: 1.25em;
+            line-height: 0;
+            content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+            transition: transform 0.35s ease;
+            transform-origin: center;
+        }
+
+        .btn-toggle[aria-expanded="true"]::before {
+            transform: rotate(90deg);
+        }
+
+        .btn-toggle-nav a {
+            display: inline-flex;
+            padding: 0.1875rem 0.5rem;
+            margin-top: 0.125rem;
+            margin-left: 1.25rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-toggle-nav a:hover,
+        .btn-toggle-nav a:focus {
+            background-color: var(--highlight-color);
+        }
+
+        .dh-back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .dh-back-to-top-btn:hover {
+            opacity: 1;
+        }
+
+        .dh-logo-top {
+            color: var(--primary-color);
+            font-family: 'Sarina', cursive;
+            font-size: clamp(2.5rem, 4vw, 4rem);
+        }
+
+        .dh-navbar {
+            background: radial-gradient(circle, rgba(102,114,146,1) 0%, rgba(224,189,238,1) 100%);
+            transition: background-color 0.3s;
+        }
+
+        .dh-navbar.scrolled {
+            background: rgba(102,114,146,0.95);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .dh-navbar-brand {
+            color: var(--primary-color);
+            font-size: 1.7rem;
+            font-size: 2.5rem !important; /* Matches h1 size in content sections */
+            font-family: 'Dancing Script', cursive; /* Matches your logo style */
+
+        }
+
+        .dh-nav-item-link {
+            color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        .dh-nav-item-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        .dh-sidebar-toggle {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            margin: 1rem 0;
+            width: 100%;
+            display: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dh-sidebar-toggle .menu-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .dh-sidebar-toggle[aria-expanded="true"] .menu-icon {
+            transform: rotate(45deg);
+        }
+
+        .dh-sidebar-ads {
+            background-color: var(--sidebar-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .dh-sidebar-ads:hover {
+            transform: translateY(-2px);
+        }
+
+        .dh-footer-gradient {
+            background: linear-gradient(to bottom right, rgba(102,114,146,1) 0%, rgba(224,189,238,1) 100%);
+        }
+
+        .dh-footer-copyright {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .dh-hr {
+            height: 1px;
+            opacity: 0.5;
+        }
+
+        /* Enhanced sidebar styles */
+        #leftNavCollapse {
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile and desktop adjustments */
+        @media (max-width: 991.98px) {
+            .navbar-toggler {
+                order: 2;
+                margin-left: auto;
+            }
+            .dh-navbar-brand {
+                order: 1;
+            }
+            .dh-sidebar-toggle {
+                display: block;
+            }
+            aside.col-12 {
+                flex: 0 0 200px; /* Reduced width on mobile when open */
+                max-width: 200px;
+            }
+            #leftNavCollapse {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 200px; /* Reduced width to match aside */
+                height: 100vh;
+                background-color: #fff;
+                padding-top: 60px;
+                z-index: 1050;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+                overflow-y: auto;
+            }
+            #leftNavCollapse.show {
+                display: block;
+            }
+            .navbar-collapse {
+                text-align: center;
+            }
+            .navbar-nav {
+                margin: 0 auto;
+                width: 100%;
+            }
+            .dh-nav-item-link {
+                display: block;
+                padding: 0.75rem 0;
+            }
+            section {
+                margin-left: 0;
+            }
+            section.col-md-9.col-lg-10 {
+                transition: margin-left 0.3s ease;
+            }
+            body.show-sidebar section.col-md-9.col-lg-10 {
+                margin-left: 200px; /* Reduced margin to match sidebar width */
+            }
+        }
+
+        @media (min-width: 992px) {
+            aside.col-md-3 {
+                flex: 0 0 200px; /* Reduced width on desktop */
+                max-width: 200px;
+            }
+            #leftNavCollapse {
+                display: block !important;
+                position: static;
+                width: 200px; /* Reduced width */
+                height: auto;
+                box-shadow: none;
+                padding-top: 0;
+            }
+            .dh-sidebar-toggle {
+                display: none;
+            }
+            section.col-md-9 {
+                flex: 0 0 calc(100% - 200px); /* Adjusted content width */
+                max-width: calc(100% - 200px);
+            }
+        }
+
+  .navbar-nav .nav-link {
+    font-size: 1.5rem !important; /* Matches or complements header sizes */
+    font-weight: 600; /* Bold for emphasis */
+    padding: 0.5rem 1rem; /* Increased padding for better spacing */
+    transition: color 0.2s; /* Smooth hover effect */
+  }
+  .navbar-nav .nav-link:hover {
+    color: rgba(78, 33, 97, 1); /* Use theme color for hover */
+  }
+
+    </style>
+
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Q6RZD2T3B0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('set', 'event', {
+            tenant_name: 'priyankadatar'
+        });
+        gtag('config', 'G-Q6RZD2T3B0');
+    </script>
+
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swUrl = '/js/service-worker-1744265811.js';
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => console.log('Service Worker registered:', registration))
+                    .catch(error => console.error('Service Worker registration failed:', error));
+            });
+        }
+    </script>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <a href="#top" class="btn dh-back-to-top-btn" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+        </svg>
+    </a>
+
+    <header id="top">
+        
+        <div class="container text-center py-3">
+            <a class="dh-logo-top text-decoration-none" href="/">
+                Priyanka Datar
+            </a>
+        </div>
+        
+
+        <nav class="navbar navbar-expand-lg rounded-pill dh-navbar">
+            <div class="container d-flex align-items-center">
+                
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dh-navbar-01" aria-controls="dh-navbar-01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="dh-navbar-01">
+                    <ul class="navbar-nav">
+                        
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/recipes/">
+                                Recipes
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/travel/">
+                                Travel
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/analytics/">
+                                Analytics
+                            </a>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link dh-nav-item-link" href="/shop/">
+                                Shop
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid py-4">
+        <div class="row">
+            
+            <aside class="col-12 col-md-3 col-lg-2">
+                <button class="btn dh-sidebar-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#leftNavCollapse" aria-controls="leftNavCollapse" aria-expanded="false" aria-label="Toggle Categories Sidebar">
+                    <span class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </span>
+                    Explore
+                </button>
+
+                <div class="collapse" id="leftNavCollapse">
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/recipes/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Recipes</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Recipes_coll-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Collections
+                                </button>
+                                <div class="collapse" id="Recipes_coll-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/recipes/collection/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#meal" class="link-dark rounded">Meal</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#side%20dish" class="link-dark rounded">Side dish</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#breakfast" class="link-dark rounded">Breakfast</a></li>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/collection/#snack" class="link-dark rounded">Snack</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Recipes-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Recipes-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/recipes/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#smoothie" class="link-dark rounded">Smoothie</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#raita" class="link-dark rounded">Raita</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#sandwich" class="link-dark rounded">Sandwich</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#salad" class="link-dark rounded">Salad</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#sweet" class="link-dark rounded">Sweet</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#pickle" class="link-dark rounded">Pickle</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#soup" class="link-dark rounded">Soup</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#meal" class="link-dark rounded">Meal</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#curry" class="link-dark rounded">Curry</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#rice" class="link-dark rounded">Rice</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#paratha" class="link-dark rounded">Paratha</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#chutney" class="link-dark rounded">Chutney</a></li>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <li><a href="/recipes/category/#snack" class="link-dark rounded">Snack</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/travel/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Travel</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Travel_coll-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Collections
+                                </button>
+                                <div class="collapse" id="Travel_coll-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/travel/collection/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/travel/collection/#asia" class="link-dark rounded">Asia</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Travel-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Travel-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/travel/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <li><a href="/travel/category/#travel%20guide" class="link-dark rounded">Travel Guide</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/analytics/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Analytics</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Analytics_coll-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Collections
+                                </button>
+                                <div class="collapse" id="Analytics_coll-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/analytics/collection/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/analytics/collection/#domain" class="link-dark rounded">Domain</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Analytics-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Analytics-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/analytics/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/analytics/category/#people%20analytics" class="link-dark rounded">People Analytics</a></li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex-shrink-0 p-4 bg-white" style="width: 100%;">
+                        <a href="/shop/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                            <span class="fs-4 fw-semibold">Shop</span>
+                        </a>
+                        <ul class="list-unstyled ps-0">
+                            
+                            
+                            <li class="mb-1">
+                                <button class="btn btn-lg btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#Shop-cat-collapse" aria-expanded="false" data-bs-parent="#leftNavCollapse">
+                                    Category
+                                </button>
+                                <div class="collapse" id="Shop-cat-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="/shop/category/" class="link-dark rounded">All</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#photography" class="link-dark rounded">Photography</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#cooking" class="link-dark rounded">Cooking</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#travel" class="link-dark rounded">Travel</a></li>
+                                        
+                                        
+                                        
+                                        <li><a href="/shop/category/#utensil" class="link-dark rounded">Utensil</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="border-top my-3"></li>
+                        </ul>
+                    </div>
+                    
+                    
+
+                    <hr class="container-fluid hr dh-hr" />
+                    <hr class="container-fluid hr dh-hr" />
+
+                    <div class="flex-shrink-0 p-4 dh-sidebar-ads">
+
+                    </div>
+                </div>
+            </aside>
+            
+
+            <section class="col-12 col-md-9 col-lg-10">
+                
+
+
+<style>
+  .content-section {
+    padding-left: 15px;
+    padding-right: 15px; /* Added for symmetry */
+  }
+  .content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .content-section .card {
+    border: none;
+  }
+  .content-section img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  .badge-meta {
+    font-size: 0.9rem;
+    margin: 0.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .dh-featured-image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .dh-featured-image-container img {
+    display: block;
+    width: 100%;
+    height: 500px; /* Default height for larger screens */
+    object-fit: cover;
+  }
+  .dh-featured-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    flex-direction: column; /* Stack title and subtitle */
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .dh-featured-image-overlay h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .dh-featured-image-overlay p {
+    font-size: 1.2rem;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .jump-to-recipe-btn {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: rgba(78, 33, 97, 1);
+    color: rgba(240, 248, 127, 1);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  .jump-to-recipe-btn:hover {
+    background-color: rgba(78, 33, 97, 0.8);
+  }
+  .recipe-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .recipe-stat svg {
+    margin-bottom: 0.5rem;
+  }
+  .recipe-stat .badge {
+    padding: 0.5rem 1rem;
+  }
+  .ingredients-sticky {
+    position: sticky;
+    top: 20px;
+  }
+  .step-number {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background-color: rgba(78, 33, 97, 1);
+    color: white;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  .pro-tip-item {
+    background-color: rgba(78, 33, 97, 0.17);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .tags-row .badge {
+    transition: transform 0.2s;
+  }
+  .tags-row .badge:hover {
+    transform: scale(1.1);
+  }
+  .print-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(78, 33, 97, 1);
+    color: rgba(240, 248, 127, 1);
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dh-featured-image-overlay h1 {
+      font-size: 2rem;
+    }
+    .dh-featured-image-overlay p {
+      font-size: 1rem;
+    }
+    .dh-featured-image-container img {
+      height: 300px;
+    }
+    .ingredients-column {
+      order: -1; /* Move ingredients above steps on mobile */
+    }
+    .steps-column {
+      margin-top: 2rem;
+    }
+    .pro-tips-collapse {
+      display: none;
+    }
+    .pro-tips-collapse.show {
+      display: block;
+    }
+  }
+  @media (max-width: 576px) {
+    .dh-featured-image-overlay h1 {
+      font-size: 1.5rem;
+    }
+    .dh-featured-image-overlay p {
+      font-size: 0.9rem;
+    }
+    .dh-featured-image-container img {
+      height: 250px;
+    }
+  }
+  /* Print stylesheet */
+  @media print {
+    .dh-sidebar-toggle,
+    #leftNavCollapse,
+    .dh-back-to-top-btn,
+    #lightwebcomments-container,
+    .comment-form,
+    footer {
+      display: none !important;
+    }
+    .content-section {
+      padding: 0;
+    }
+    .dh-featured-image-container img {
+      height: 300px;
+    }
+  }
+</style>
+
+<script src="/js/engagemini-widget-v1743752227.js" defer></script>
+
+<div class="content-section">
+  <div class="mt-4">
+    <!-- Featured Image with Overlay -->
+    <div class="dh-featured-image-container">
+      <a class="link-underline-light">
+        
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+        
+    
+
+    
+
+    
+        <img class="rounded-bottom border"
+             src="/assets/images/placeholder.jpg"
+             alt="Besan Laddu by Priyanka Datar"
+             loading="lazy"
+             >
+    
+
+      </a>
+      <div class="dh-featured-image-overlay">
+        <h1>Besan Laddu</h1>
+        <p>A perfect recipe for protein-packed homemade besan laddu</p>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item text-capitalize"><a href="/">Home</a></li>
+        <li class="breadcrumb-item text-capitalize"><a href="/recipes/">Recipes</a></li>
+        
+          <li class="breadcrumb-item text-capitalize active" aria-current="page">
+            <a href="/recipes/category/#sweet">Sweet</a>
+            (<a href="/recipes/collection/#snack">Snack</a>)
+          </li>
+        
+      </ol>
+    </nav>
+
+    <!-- Buttons Row -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <!-- Share Buttons (Left Side) -->
+      <div class="share-icons">
+        <a href="whatsapp://send?text=I%20found%20a%20great%20post%20which%20I%20would%20like%20to%20share%2C%20please%20have%20a%20read%20http://localhost:1315/recipes/besan-laddu/" class="btn btn-success btn-sm me-2" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/share?url=http://localhost:1315/recipes/besan-laddu/" class="btn btn-info btn-sm me-2" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1315/recipes/besan-laddu/" class="btn btn-primary btn-sm me-2" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=I%20found%20a%20great%20post%20which%20I%20would%20like%20to%20share%2C%20please%20have%20a%20read%20http://localhost:1315/recipes/besan-laddu/" class="btn btn-secondary btn-sm me-2" target="_blank">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="mailto:?subject=Besan Laddu&body=I%20found%20a%20great%20post%20which%20I%20would%20like%20to%20share%2C%20please%20have%20a%20read%20http://localhost:1315/recipes/besan-laddu/" class="btn btn-warning btn-sm me-2" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <!-- Print and Jump Buttons (Right Side) -->
+      <div>
+        <a href="javascript:window.print()" class="print-btn">Print Recipe</a>
+        <a href="#how-to-make-it" class="jump-to-recipe-btn">Jump to Recipe</a>
+      </div>
+    </div>
+
+    <!-- Metadata -->
+    <div class="text-center mb-3">
+      
+      
+      <small class="badge bg-light text-dark badge-meta">Collection: Snack</small>
+      <small class="badge bg-light text-dark badge-meta">Category: Sweet</small>
+    </div>
+
+    <!-- Recipe Stats -->
+    <div class="row mb-4">
+      
+      <div class="col-md-4 text-center recipe-stat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m0-1A7 7 0 1 1 8 1a7 7 0 0 1 0 14M8 4a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .146.354l2 2a.5.5 0 0 0 .708-.708L8.5 8.293V4.5A.5.5 0 0 0 8 4"/>
+        </svg>
+        <p class="badge text-uppercase fs-6"
+           style="background-color: rgba(78, 33, 97, 1); color: rgba(240, 248, 127, 1);">
+          Preparation</p>
+        <p class="badge text-uppercase fs-3"
+           style="background-color: rgba(240, 248, 127, 1); color: rgba(78, 33, 97, 1);">
+          10</p>
+        <p class="text-muted">minutes</p>
+      </div>
+      <div class="col-md-4 text-center recipe-stat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m0-1A7 7 0 1 1 8 1a7 7 0 0 1 0 14M8 4a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .146.354l2 2a.5.5 0 0 0 .708-.708L8.5 8.293V4.5A.5.5 0 0 0 8 4"/>
+        </svg>
+        <p class="badge text-uppercase fs-6"
+           style="background-color: rgba(78, 33, 97, 1); color: rgba(240, 248, 127, 1);">
+          Cooking</p>
+        <p class="badge text-uppercase fs-3"
+           style="background-color: rgba(240, 248, 127, 1); color: rgba(78, 33, 97, 1);">
+          50</p>
+        <p class="text-muted">minutes</p>
+      </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h2 class="section-title badge text-uppercase" style="background-color: rgba(255, 255, 255, 1); color: rgba(78, 33, 97, 1);" id="introduction">
+          Introduction
+        </h2>
+        <p>Besan laddu is a favorite sweet in India, very fondly consumed by everyone during the Diwali festival. This recipe includes very few ingredients, yet the taste and the texture of the laddu is awesome. These laddus just melt in your mouth. Due to desi ghee and gram flour, they are rich in protein and increase strength when consumed in moderation. You may replace powdered sugar with grated jaggery if you want to make them even healthier. Just follow along all the steps in this recipe and you will end up making perfect besan laddu that everyone would love.</p>
+      </div>
+    </div>
+
+    <!-- How to Make It & Ingredients -->
+    <div class="row mb-4">
+      <div class="col-md-4 ingredients-column">
+        <h2 class="section-title badge text-uppercase"
+            style="background-color: rgba(255, 255, 255, 1); color: rgba(78, 33, 97, 1);">
+          What You Need</h2>
+        <ul class="list-group ingredients-sticky">
+          
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." style="--bs-list-group-border-width: 2px">
+               Gram flour (besan) - 4 cups
+
+            </li>
+          
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." style="--bs-list-group-border-width: 2px">
+               Powdered sugar - 2 cups
+
+            </li>
+          
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." style="--bs-list-group-border-width: 2px">
+               Desi ghee - 1.5 cups
+
+            </li>
+          
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." style="--bs-list-group-border-width: 2px">
+               Lukewarm milk - ¾ cup
+
+            </li>
+          
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." style="--bs-list-group-border-width: 2px">
+               Nutmeg (grated) - Half
+
+            </li>
+          
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." style="--bs-list-group-border-width: 2px">
+               Raisins
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="col-md-8 border-end steps-column" id="how-to-make-it">
+        <h2 class="section-title badge text-uppercase"
+            style="background-color: rgba(255, 255, 255, 1); color: rgba(78, 33, 97, 1);">
+          How to Make It</h2>
+        
+        
+          
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">01</span> <p>Sieve the gram flour.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">02</span> <p>In a pan, heat the ghee.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">03</span> <p>Once the ghee is hot, add the gram flour and roast on low heat.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">04</span> <p>The gram flour should be well-coated with ghee. If not, then add a little more of ghee.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">05</span> <p>When the gram flour changes color (slightly pinkish) and becomes semi-liquid, turn off the heat.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">06</span> <p>Add lukewarm milk to the mixture and stir well.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">07</span> <p>Turn the heat back on and roast on low heat for 5 more minutes. Then turn off the burner and let it cool down for a while.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">08</span> <p>Once the mixture becomes warm, add powdered sugar and grated nutmeg and knead well.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">09</span> <p>Shape the mixture into laddus with your hands, adding raisins on top.</p></p>
+                </div>
+              </div>
+            
+          
+            
+              <div class="card mb-2"
+                   style="background-color: rgba(78, 33, 97, 0.17); --bs-border-color: rgba(218, 177, 218, 1);">
+                <div class="card-body">
+                  <p><span class="step-number">10</span> <p>This quantity makes approximately 28-30 laddus.</p></p>
+                </div>
+              </div>
+            
+          
+        
+      </div>
+    </div>
+
+    <!-- Pro Tips -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h2 class="section-title badge text-uppercase"
+            style="background-color: rgba(255, 255, 255, 1); color: rgba(78, 33, 97, 1);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightbulb me-2" viewBox="0 0 16 16">
+            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 1-.453-.618A6 6 0 0 1 2 6m5-5a5 5 0 0 0-5 5c0 1.494.626 2.842 1.634 3.806a1 1 0 0 0 .226.31l.761 1.769A.5.5 0 0 1 5 12.5a.5.5 0 0 1 .5.5 1 1 0 0 0 1 1h3a1 1 0 0 0 1-1 .5.5 0 0 1 .5-.5.5.5 0 0 1 .378-.615l.762-1.77a1 1 0 0 0 .226-.309A5 5 0 0 0 12 6a5 5 0 0 0-5-5m0 1a4 4 0 0 1 4 4c0 1.078-.43 2.05-1.125 2.762l-.09.087-.762 1.77A1 1 0 0 0 9 12.5a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1 .5.5 0 0 0-.378-.615l-.762-1.77-.09-.087A4 4 0 0 1 3 6a4 4 0 0 1 4-4"/>
+          </svg>
+          Pro Tips
+        </h2>
+        <button class="btn btn-link d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#pro-tips-collapse" aria-expanded="false" aria-controls="pro-tips-collapse">
+          Show/Hide Pro Tips
+        </button>
+        <div class="row pro-tips-collapse collapse show" id="pro-tips-collapse">
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              
+                
+              
+                
+                  <li class="list-group-item pro-tip-item"><p>Always use freshly ground gram flour for an awesome taste.</p></li>
+                
+              
+                
+              
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              
+                
+              
+                
+              
+                
+                  <li class="list-group-item pro-tip-item"><p>Consume these laddus in moderation, as they contain sugar.</p></li>
+                
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <p>Share this recipe with your family and friend!</p>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="row mb-4 tags-row">
+      
+        <div class="col-auto">
+          <a href="#" class="badge bg-secondary fs-5">#besan</a>
+        </div>
+      
+        <div class="col-auto">
+          <a href="#" class="badge bg-secondary fs-5">#protein-rich</a>
+        </div>
+      
+        <div class="col-auto">
+          <a href="#" class="badge bg-secondary fs-5">#laddu</a>
+        </div>
+      
+        <div class="col-auto">
+          <a href="#" class="badge bg-secondary fs-5">#indian</a>
+        </div>
+      
+        <div class="col-auto">
+          <a href="#" class="badge bg-secondary fs-5">#diwali</a>
+        </div>
+      
+    </div>
+
+    <!-- Comments -->
+    
+      <section id="lightwebcomments-container">
+        <p>Loading comments...</p>
+      </section>
+    
+
+    
+      <hr class="my-4">
+      <h2 class="fs-2 badge bg-secondary">Post a Comment</h2>
+      <form id="lightwebcomments-form" action="#" method="post" class="comment-form">
+        <p class="text-muted mb-2" style="font-size: 0.9rem;">
+          Your name is just for display, we don't collect personal details. Share your love and feedback! ❤️
+          <span class="fw-lighter">Comments powered by <a href="https://www.sparkyminis.com/engagemini">EngageMini API</a></span>
+        </p>
+        <div class="mb-3 form-group">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="mb-3 form-group">
+          <label for="comment" class="form-label">Your Comment:</label>
+          <textarea name="message" class="form-control" id="comment" rows="5" placeholder="Your Comment"></textarea>
+        </div>
+        <div class="mt-3 form-group">
+          <button class="btn btn-primary" type="submit">Post Comment</button>
+        </div>
+      </form>
+    
+  </div>
+</div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-4 py-4 dh-footer-gradient">
+        <div class="container">
+          <div class="row">
+            <!-- Newsletter Subscription Form -->
+            <div class="col-md-6 mb-4 mb-md-0">
+              <h5 class="text-white mb-3">Subscribe to Our Newsletter</h5>
+              <form id="newsletter-form" class="needs-validation" novalidate>
+                <div class="input-group mb-2">
+                  <input type="email" class="form-control" id="newsletter-email" placeholder="Enter your email" required>
+                  <button type="submit" class="btn btn-warning">Subscribe</button>
+                </div>
+                <small class="text-muted">Powered by <a href="https://www.sparkyminis.com/catchmini" target="_blank" rel="noopener">CatchMini API</a></small>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </form>
+            </div>
+      
+            <!-- Copyright and Links -->
+            <div class="col-md-6 text-center text-md-end">
+              <p class="text-white mb-1">© Priyanka Datar  - All rights reserved.</p>
+              <p class="text-white mb-1">Built with ❤️ using <a href="https://www.sparkyminis.com" target="_blank" rel="noopener" class="text-decoration-underline">SparkyMinis</a></p>
+              <p class="text-white">
+                <a href="/privacy" class="text-decoration-underline text-white">Privacy Policy</a>
+              </p>
+            </div>
+          </div>
+          <hr class="dh-hr bg-white opacity-50">
+        </div>
+      </footer>
+      
+      <style>
+        .dh-footer-gradient {
+          background: linear-gradient(90deg, rgba(218, 177, 218, 1), rgba(78, 33, 97, 1));
+          color: #ffffff;
+        }
+        .dh-footer-gradient .btn-primary {
+          background-color: rgba(240, 248, 127, 1);
+          border-color: rgba(240, 248, 127, 1);
+        }
+        .dh-footer-gradient .btn-primary:hover {
+          background-color: rgba(240, 248, 127, 0.8);
+          border-color: rgba(240, 248, 127, 0.8);
+        }
+        .dh-footer-gradient .form-control {
+          border-color: #ffffff;
+          color: #000000;
+        }
+        .dh-footer-gradient .form-control:focus {
+          border-color: rgba(78, 33, 97, 1);
+          box-shadow: 0 0 5px rgba(78, 33, 97, 1);
+        }
+        .dh-footer-gradient .text-decoration-underline:hover {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+        .dh-footer-gradient .needs-validation {
+          margin-bottom: 0;
+        }
+        .dh-footer-gradient .invalid-feedback {
+          display: none;
+          width: 100%;
+          margin-top: 0.25rem;
+          font-size: 0.875em;
+          color: #dc3545;
+        }
+        .dh-footer-gradient .needs-validation.invalid .invalid-feedback {
+          display: block;
+        }
+        .dh-footer-gradient .needs-validation.invalid .form-control {
+          border-color: #dc3545;
+        }
+      
+        /* JavaScript for form validation */
+        <script>
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var form = forms[0];
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  form.classList.add('invalid');
+                } else {
+                  event.preventDefault(); // Prevent default submission for demo
+                  alert('Thank you for subscribing! (This is a demo. Integrate with CatchMini API for real functionality.)');
+                  form.reset();
+                  form.classList.remove('invalid');
+                }
+                form.classList.add('was-validated');
+              }, false);
+            }, false);
+          })();
+        </script>
+      </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.dh-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top button visibility
+        const backToTopBtn = document.querySelector('.dh-back-to-top-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Sidebar and nested collapse management
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebarToggle = document.querySelector('.dh-sidebar-toggle');
+            const sidebar = document.getElementById('leftNavCollapse');
+            const body = document.body;
+
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', () => {
+                    const bsCollapse = new bootstrap.Collapse(sidebar, { toggle: false });
+                    const isOpen = sidebar.classList.contains('show');
+                    bsCollapse.toggle();
+                    body.classList.toggle('show-sidebar', !isOpen);
+                    console.log('Sidebar toggle clicked, state:', !isOpen);
+                });
+            }
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 991.98) {
+                    const isOutside = !sidebar.contains(e.target) && e.target !== sidebarToggle;
+                    if (isOutside && sidebar.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(sidebar, { toggle: false });
+                        bsCollapse.hide();
+                        body.classList.remove('show-sidebar');
+                        console.log('Sidebar closed by outside click');
+                    }
+                }
+            });
+        });
+
+        // Debugging: Log when Bootstrap is loaded
+        if (typeof bootstrap !== 'undefined') {
+            console.log('Bootstrap JS loaded successfully');
+        } else {
+            console.error('Bootstrap JS failed to load');
+        }
+    </script>
+
+    <!-- GDPR Consent Popup -->
+
+  <div id="gdprConsentPopup" style="position: fixed; bottom: 20px; right: 20px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 1000; display: none;">
+    <p>We use cookies from Google services (Analytics, AdSense) and IP tracking for security (CatchMini/EngageMini). No personal data is collected. <a href="/privacy">Learn more</a>.</p>
+    <button onclick="acceptGdprConsent()">Accept</button>
+    <button onclick="declineGdprConsent()">Decline</button>
+  </div>
+
+  <script>
+    document.getElementById('gdprConsentPopup').style.display = 'block';
+    function acceptGdprConsent() {
+      sessionStorage.setItem('gdpr_consent_given', 'true');
+      document.getElementById('gdprConsentPopup').style.display = 'none';
+    }
+    function declineGdprConsent() {
+      sessionStorage.setItem('gdpr_consent_given', 'true');
+      document.getElementById('gdprConsentPopup').style.display = 'none';
+      // Optionally disable non-essential scripts here
+    }
+  </script>
+
+</body>
+</html>
